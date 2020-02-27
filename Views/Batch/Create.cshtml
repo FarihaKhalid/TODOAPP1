@@ -1,0 +1,28 @@
+﻿@model SugarBItApplication2.Models.Batchs
+
+@{
+    ViewBag.Title = "Batch Register";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <table>
+        <tr>
+            <td>@Html.Label("Batch Name")</td>
+            <td>@Html.TextBoxFor(model => model.BatchName) @Html.ValidationMessageFor(model => model.BatchName)</td>
+            
+        
+    </tr>
+   
+
+   
+</table>
+<div><input type="submit" value="Save" class="btn btn-default" /></div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
